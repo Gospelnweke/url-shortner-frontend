@@ -18,7 +18,7 @@ function App() {
     console.log(`long url: ${longUr}`);
 
     axios
-      .post('http://gospily-api/index', { longUrl: longUr })
+      .post('http://gospily-api.onrender.com/index', { longUrl: longUr })
       .then((res) => {
         const { shortUrl } = res.data;
         //const realShortUrl = shortUrl.substring(22);

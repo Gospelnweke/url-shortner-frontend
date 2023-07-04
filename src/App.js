@@ -5,7 +5,7 @@ import { useState } from 'react';
 import axios from 'axios';
 import CopyToClipboard from 'react-copy-to-clipboard';
 import LogRocket from 'logrocket';
-LogRocket.init('2soyra/urlshortner');
+LogRocket.init('2soyra/realurlshortner');
 
 function App() {
   const [isActive, setIsActive] = useState(false);

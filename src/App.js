@@ -1,9 +1,11 @@
 import React from 'react';
 import './App.css';
-import { Link, useRevalidator } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import axios from 'axios';
 import CopyToClipboard from 'react-copy-to-clipboard';
+import LogRocket from 'logrocket';
+LogRocket.init('2soyra/urlshortner');
 
 function App() {
   const [isActive, setIsActive] = useState(false);
@@ -18,7 +20,7 @@ function App() {
     console.log(`long url: ${longUr}`);
 
     axios
-      .post('http://gospily-api.onrender.com/index', { longUrl: longUr })
+      .post('http://localhost:2042/index', { longUrl: longUr })
       .then((res) => {
         const { shortUrl } = res.data;
         //const realShortUrl = shortUrl.substring(22);
